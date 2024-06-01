@@ -3,25 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardNameInput = document.getElementById('name');
     const cardExpirationInput = document.getElementById('expiration');
     const cardCVVInput = document.getElementById('cvv');
-    const loginForm = document.getElementById('login-form');
-    const loginContainer = document.getElementById('login-container');
     const cardContainer = document.getElementById('card-container');
 
     const cardNumberDisplay = document.getElementById('card-number');
     const cardNameDisplay = document.getElementById('card-holder');
     const cardExpirationDisplay = document.getElementById('card-expiration');
     const cardCVVDisplay = document.getElementById('card-cvv');
-
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Simple client-side validation for demo purposes
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        if (username && password) {
-            loginContainer.style.display = 'none';
-            cardContainer.style.display = 'block';
-        }
-    });
 
     cardNumberInput.addEventListener('input', function() {
         cardNumberDisplay.textContent = this.value.replace(/(\d{4})/g, '$1 ').trim();
