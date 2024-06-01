@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+.card {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 0.6s;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #0066cc, #33ccff);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-chip {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.card-number {
+    margin-top: 70px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    transition: box-shadow 0.3s;
+}
+
+.card-holder, .card-expiration, .card-cvv {
+    margin-top: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.card-holder label, .card-expiration label, .card-cvv label {
+    font-size: 0.75em;
+    color: #ddd;
+}
+
+.card-holder div, .card-expiration div, .card-cvv div {
+    font-size: 1em;
+}
+
+.card-expiration {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: box-shadow 0.3s;
+}
+
+.card-expiration div {
+    font-size: 1em;
+    width: 50px;
+    text-align: right;
+}
+
+.card-back .card-cvv {
+    text-align: right;
+    margin-top: 50px;
+}
+
+.card-magnetic-strip {
+    background: #000;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0066cc;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004c99;
+}
+
+.zoom-in {
+    transform: scale(1.1);
+}
+
+.highlight {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}
